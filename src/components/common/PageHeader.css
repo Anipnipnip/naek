@@ -1,0 +1,49 @@
+/* Shared page header styles, used by MarketOverview, ComingSoon, and other pages */
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-6);
+}
+
+.page-header__title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.page-header__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.page-header__meta {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.page-header__badge {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-default);
+  color: var(--text-muted);
+}
+
+.page-header__badge--dev {
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+/* Shared "section" primitive used by MarketOverview, StockDetail, and other
+   data-display pages for consistent spacing/heading style. */
+.mo-section__title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}

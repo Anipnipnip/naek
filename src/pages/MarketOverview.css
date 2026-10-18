@@ -1,0 +1,234 @@
+.market-overview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Sections */
+.mo-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Index cards grid */
+.mo-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+.mo-index-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: border-color var(--transition-fast);
+}
+
+.mo-index-card:hover {
+  border-color: var(--text-muted);
+}
+
+.mo-index-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mo-index-card__name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.mo-index-card__status {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+.mo-index-card__value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.mo-index-card__change {
+  display: flex;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+}
+
+.mo-index-card__delta {
+  color: var(--text-muted);
+}
+
+.mo-index-card__pct {
+  color: var(--text-muted);
+}
+
+/* Market breadth */
+.mo-breadth {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.mo-breadth__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.mo-breadth__label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.mo-breadth__value {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.mo-breadth__item--up .mo-breadth__value { color: var(--positive); }
+.mo-breadth__item--down .mo-breadth__value { color: var(--negative); }
+.mo-breadth__item--neutral .mo-breadth__value { color: var(--text-muted); }
+
+.mo-breadth__bar {
+  flex: 1;
+  min-width: 120px;
+  height: 6px;
+  display: flex;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.mo-breadth__bar-segment--up { background: var(--positive); }
+.mo-breadth__bar-segment--neutral { background: var(--text-muted); opacity: 0.4; }
+.mo-breadth__bar-segment--down { background: var(--negative); }
+
+/* 2-column grid */
+.mo-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-6);
+}
+
+/* Tables */
+.mo-table-wrapper {
+  overflow-x: auto;
+}
+
+.mo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.mo-table__th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.mo-table__th--right {
+  text-align: right;
+}
+
+.mo-table__empty {
+  padding: var(--space-8) var(--space-3);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.mo-table td {
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.mo-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.watchlist-remove-btn {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--negative);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.watchlist-remove-btn:hover {
+  background: var(--bg-hover);
+}
+
+/* Quick access grid */
+.mo-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-3);
+}
+
+.mo-quick-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+  text-decoration: none;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.mo-quick-card:hover {
+  border-color: var(--text-muted);
+  background: var(--bg-elevated);
+}
+
+.mo-quick-card__icon {
+  font-size: 1.5rem;
+  opacity: 0.6;
+}
+
+.mo-quick-card__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.mo-quick-card__desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .page-header__title {
+    font-size: 1.25rem;
+  }
+
+  .mo-index-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mo-index-card__value {
+    font-size: 1.375rem;
+  }
+
+  .mo-grid-2col {
+    grid-template-columns: 1fr;
+  }
+}

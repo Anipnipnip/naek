@@ -1,0 +1,94 @@
+.naek-ai {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 720px;
+}
+
+.naek-ai__form {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.naek-ai__input {
+  flex: 1;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.naek-ai__input:focus-visible {
+  border-color: var(--text-muted);
+}
+
+.naek-ai__submit {
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-control);
+  background: var(--accent);
+  color: var(--bg-canvas);
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.naek-ai__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.naek-ai__prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.naek-ai__prompt-chip {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border-default);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  transition: background var(--transition-fast);
+}
+
+.naek-ai__prompt-chip:hover {
+  background: var(--bg-hover);
+}
+
+.naek-ai__answer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.naek-ai__answer-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+}
+
+.naek-ai__answer-section p {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.naek-ai__sources {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: 0.8125rem;
+}
+
+.naek-ai__sources a {
+  color: var(--info);
+  text-decoration: underline;
+}

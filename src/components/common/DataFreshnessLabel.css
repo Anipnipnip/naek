@@ -1,0 +1,35 @@
+.freshness-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.freshness-label__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.freshness-label--real_time .freshness-label__dot {
+  background: var(--positive);
+}
+
+.freshness-label--delayed .freshness-label__dot {
+  background: var(--warning);
+}
+
+.freshness-label--end_of_day .freshness-label__dot {
+  background: var(--info);
+}
+
+.freshness-label--unavailable .freshness-label__dot {
+  background: var(--negative);
+}
+
+.freshness-label__text {
+  white-space: normal;
+}

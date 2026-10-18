@@ -1,0 +1,43 @@
+.brand-logo__link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.brand-logo__link:hover {
+  opacity: 0.85;
+}
+
+.brand-logo {
+  object-fit: contain;
+  height: auto;
+}
+
+/* Size variants per design spec */
+.brand-logo--sm {
+  height: 24px;
+}
+
+.brand-logo--md {
+  height: 32px;
+}
+
+.brand-logo--lg {
+  height: 42px;
+}
+
+.brand-logo--xl {
+  height: 52px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .brand-logo--md {
+    height: 28px;
+  }
+
+  .brand-logo--lg {
+    height: 36px;
+  }
+}

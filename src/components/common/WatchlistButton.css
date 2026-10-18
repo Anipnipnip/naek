@@ -1,0 +1,23 @@
+.watchlist-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border-default);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  align-self: flex-start;
+}
+
+.watchlist-btn:hover {
+  background: var(--bg-hover);
+}
+
+.watchlist-btn--active {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}

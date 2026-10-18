@@ -1,0 +1,1 @@
+Queries consumed by sqlc will live here as they are added (e.g. instruments.sql, market_snapshots.sql).
